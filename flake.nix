@@ -54,7 +54,7 @@
           {
             imports = [ ./module.nix ];
             services.omarchy-iphone-mirror.package =
-              nixpkgs.lib.mkDefault self.packages.${pkgs.system}.omarchy-iphone-mirror;
+              nixpkgs.lib.mkDefault self.packages.${pkgs.stdenv.hostPlatform.system}.omarchy-iphone-mirror;
           };
       };
 
